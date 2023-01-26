@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CDBE3E97-B8B8-4809-AF3B-1ECE02979069}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebProje1</RootNamespace>
+    <AssemblyName>WebProje1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44393</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Anasayfa.aspx" />
+    <Content Include="assets\css\animate.min.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\flaticon.css" />
+    <Content Include="assets\css\fontawesome-all.min.css" />
+    <Content Include="assets\css\magnific-popup.css" />
+    <Content Include="assets\css\nice-select.css" />
+    <Content Include="assets\css\owl.carousel.min.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\slick.css" />
+    <Content Include="assets\css\slicknav.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\themify-icons.css" />
+    <Content Include="assets\fonts\fa-brands-400.svg" />
+    <Content Include="assets\fonts\fa-regular-400.svg" />
+    <Content Include="assets\fonts\fa-solid-900.svg" />
+    <Content Include="assets\fonts\flaticon.html" />
+    <Content Include="assets\fonts\Flaticon.svg" />
+    <Content Include="assets\fonts\themify.svg" />
+    <Content Include="assets\img\about\about_lft.png" />
+    <Content Include="assets\img\about\about_right.png" />
+    <Content Include="assets\img\about\pet_care.png" />
+    <Content Include="assets\img\adapt_icon\1.png" />
+    <Content Include="assets\img\adapt_icon\1.svg" />
+    <Content Include="assets\img\adapt_icon\2.png" />
+    <Content Include="assets\img\adapt_icon\3.png" />
+    <Content Include="assets\img\banner\dog.png" />
+    <Content Include="assets\img\banner\img.png" />
+    <Content Include="assets\img\blog\author.png" />
+    <Content Include="assets\img\blog\blog_1.png" />
+    <Content Include="assets\img\blog\blog_2.png" />
+    <Content Include="assets\img\blog\blog_3.png" />
+    <Content Include="assets\img\blog\blog_4.png" />
+    <Content Include="assets\img\blog\home-blog1.jpg" />
+    <Content Include="assets\img\blog\home-blog2.jpg" />
+    <Content Include="assets\img\blog\learn_about_bg.png" />
+    <Content Include="assets\img\blog\single_blog_1.png" />
+    <Content Include="assets\img\blog\single_blog_2.png" />
+    <Content Include="assets\img\blog\single_blog_3.png" />
+    <Content Include="assets\img\blog\single_blog_4.png" />
+    <Content Include="assets\img\blog\single_blog_5.png" />
+    <Content Include="assets\img\blog\slide_thumb_1.png" />
+    <Content Include="assets\img\comment\comment_1.png" />
+    <Content Include="assets\img\comment\comment_2.png" />
+    <Content Include="assets\img\comment\comment_3.png" />
+    <Content Include="assets\img\elements\a.jpg" />
+    <Content Include="assets\img\elements\a2.jpg" />
+    <Content Include="assets\img\elements\d.jpg" />
+    <Content Include="assets\img\elements\disabled-check.png" />
+    <Content Include="assets\img\elements\disabled-radio.png" />
+    <Content Include="assets\img\elements\f1.jpg" />
+    <Content Include="assets\img\elements\f2.jpg" />
+    <Content Include="assets\img\elements\f3.jpg" />
+    <Content Include="assets\img\elements\f4.jpg" />
+    <Content Include="assets\img\elements\f5.jpg" />
+    <Content Include="assets\img\elements\f6.jpg" />
+    <Content Include="assets\img\elements\f7.jpg" />
+    <Content Include="assets\img\elements\f8.jpg" />
+    <Content Include="assets\img\elements\g1.jpg" />
+    <Content Include="assets\img\elements\g2.jpg" />
+    <Content Include="assets\img\elements\g3.jpg" />
+    <Content Include="assets\img\elements\g4.jpg" />
+    <Content Include="assets\img\elements\g5.jpg" />
+    <Content Include="assets\img\elements\g6.jpg" />
+    <Content Include="assets\img\elements\g7.jpg" />
+    <Content Include="assets\img\elements\g8.jpg" />
+    <Content Include="assets\img\elements\primary-check.png" />
+    <Content Include="assets\img\elements\primary-radio.png" />
+    <Content Include="assets\img\elements\success-check.png" />
+    <Content Include="assets\img\elements\success-radio.png" />
+    <Content Include="assets\img\favicon.ico" />
+    <Content Include="assets\img\gallery\1.png" />
+    <Content Include="assets\img\gallery\2.png" />
+    <Content Include="assets\img\gallery\3.png" />
+    <Content Include="assets\img\gallery\video.png" />
+    <Content Include="assets\img\hero\about.jpg" />
+    <Content Include="assets\img\hero\ark.jpg" />
+    <Content Include="assets\img\hero\contact_hero.jpg" />
+    <Content Include="assets\img\hero\h1_hero.jpg" />
+    <Content Include="assets\img\hero\hero-_ineShape.png" />
+    <Content Include="assets\img\hero\spacep.jpg" />
+    <Content Include="assets\img\hero\spacep.PNG" />
+    <Content Include="assets\img\icon\arrow-left.png" />
+    <Content Include="assets\img\icon\arrow-right.png" />
+    <Content Include="assets\img\icon\left-white.png" />
+    <Content Include="assets\img\icon\right-white.png" />
+    <Content Include="assets\img\icon\testimonial.png" />
+    <Content Include="assets\img\logo\loder.PNG" />
+    <Content Include="assets\img\logo\logo.jpg" />
+    <Content Include="assets\img\logo\logo.PNG" />
+    <Content Include="assets\img\logo\logo2_footer.PNG" />
+    <Content Include="assets\img\logo\select-items-icon.jpg" />
+    <Content Include="assets\img\logo\testimonial.png" />
+    <Content Include="assets\img\offers\1.png" />
+    <Content Include="assets\img\offers\2.png" />
+    <Content Include="assets\img\offers\3.png" />
+    <Content Include="assets\img\our_blog\blog-img1.jpg" />
+    <Content Include="assets\img\post\next.png" />
+    <Content Include="assets\img\post\post_1.png" />
+    <Content Include="assets\img\post\post_10.png" />
+    <Content Include="assets\img\post\post_2.png" />
+    <Content Include="assets\img\post\post_3.png" />
+    <Content Include="assets\img\post\post_4.png" />
+    <Content Include="assets\img\post\post_5.png" />
+    <Content Include="assets\img\post\post_6.png" />
+    <Content Include="assets\img\post\post_7.png" />
+    <Content Include="assets\img\post\post_8.png" />
+    <Content Include="assets\img\post\post_9.png" />
+    <Content Include="assets\img\post\preview.png" />
+    <Content Include="assets\img\prising\1.png" />
+    <Content Include="assets\img\prising\10.png" />
+    <Content Include="assets\img\prising\2.png" />
+    <Content Include="assets\img\prising\3.png" />
+    <Content Include="assets\img\prising\4.png" />
+    <Content Include="assets\img\prising\5.png" />
+    <Content Include="assets\img\prising\6.png" />
+    <Content Include="assets\img\prising\7.png" />
+    <Content Include="assets\img\prising\8.png" />
+    <Content Include="assets\img\prising\9.png" />
+    <Content Include="assets\img\service\1.png" />
+    <Content Include="assets\img\service\2.png" />
+    <Content Include="assets\img\service\3.png" />
+    <Content Include="assets\img\service\footer_bg.jpg" />
+    <Content Include="assets\img\service\services1.jpg" />
+    <Content Include="assets\img\service\services2.jpg" />
+    <Content Include="assets\img\service\services3.jpg" />
+    <Content Include="assets\img\service\services4.jpg" />
+    <Content Include="assets\img\service\services5.jpg" />
+    <Content Include="assets\img\service\services6.jpg" />
+    <Content Include="assets\img\service\services7.jpg" />
+    <Content Include="assets\img\service\services8.jpg" />
+    <Content Include="assets\img\service\services9.jpg" />
+    <Content Include="assets\img\service\service_icon_1.png" />
+    <Content Include="assets\img\service\service_icon_2.png" />
+    <Content Include="assets\img\service\service_icon_3.png" />
+    <Content Include="assets\img\service\service_icon_bg_1.png" />
+    <Content Include="assets\img\service\support-img.jpg" />
+    <Content Include="assets\img\service\video-bg.jpg" />
+    <Content Include="assets\img\team\1.png" />
+    <Content Include="assets\img\team\2.png" />
+    <Content Include="assets\img\team\3.png" />
+    <Content Include="assets\img\testmonial\1.png" />
+    <Content Include="assets\img\testmonial\Homepage_testi.png" />
+    <Content Include="assets\img\testmonial\testimonial_bg.jpg" />
+    <Content Include="assets\js\animated.headline.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\contact.js" />
+    <Content Include="assets\js\jquery.ajaxchimp.min.js" />
+    <Content Include="assets\js\jquery.form.js" />
+    <Content Include="assets\js\jquery.magnific-popup.js" />
+    <Content Include="assets\js\jquery.nice-select.min.js" />
+    <Content Include="assets\js\jquery.paroller.min.js" />
+    <Content Include="assets\js\jquery.scrollUp.min.js" />
+    <Content Include="assets\js\jquery.slicknav.min.js" />
+    <Content Include="assets\js\jquery.sticky.js" />
+    <Content Include="assets\js\jquery.validate.min.js" />
+    <Content Include="assets\js\mail-script.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\one-page-nav-min.js" />
+    <Content Include="assets\js\owl.carousel.min.js" />
+    <Content Include="assets\js\plugins.js" />
+    <Content Include="assets\js\popper.min.js" />
+    <Content Include="assets\js\slick.min.js" />
+    <Content Include="assets\js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="assets\js\vendor\modernizr-3.5.0.min.js" />
+    <Content Include="assets\js\wow.min.js" />
+    <Content Include="Bizeulasın.aspx" />
+    <Content Include="Cikmissoru.aspx" />
+    <Content Include="contact-form-04\css\animate.css" />
+    <Content Include="contact-form-04\css\bootstrap.min.css" />
+    <Content Include="contact-form-04\css\bootstrap\mixins\_alert.css" />
+    <Content Include="contact-form-04\css\bootstrap\mixins\_border-radius.css" />
+    <Content Include="contact-form-04\css\bootstrap\mixins\_box-shadow.css" />
+    <Content Include="contact-form-04\css\bootstrap\mixins\_screen-reader.css" />
+    <Content Include="contact-form-04\css\bootstrap\mixins\_visibility.css" />
+    <Content Include="contact-form-04\css\bootstrap\utilities\_stretched-link.css" />
+    <Content Include="contact-form-04\css\bootstrap\utilities\_visibility.css" />
+    <Content Include="contact-form-04\css\bootstrap\_media.css" />
+    <Content Include="contact-form-04\css\style.css" />
+    <Content Include="contact-form-04\index.html" />
+    <Content Include="contact-form-04\js\bootstrap.min.js" />
+    <Content Include="contact-form-04\js\jquery.min.js" />
+    <Content Include="contact-form-04\js\jquery.validate.min.js" />
+    <Content Include="contact-form-04\js\main.js" />
+    <Content Include="contact-form-04\js\popper.js" />
+    <Content Include="contact-form-04\main.html" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Denemesınav.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Forgotpass.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="assets\fonts\fa-brands-400.eot" />
+    <Content Include="assets\fonts\fa-brands-400.ttf" />
+    <Content Include="assets\fonts\fa-brands-400.woff" />
+    <Content Include="assets\fonts\fa-brands-400.woff2" />
+    <Content Include="assets\fonts\fa-regular-400.eot" />
+    <Content Include="assets\fonts\fa-regular-400.ttf" />
+    <Content Include="assets\fonts\fa-regular-400.woff" />
+    <Content Include="assets\fonts\fa-regular-400.woff2" />
+    <Content Include="assets\fonts\fa-solid-900.eot" />
+    <Content Include="assets\fonts\fa-solid-900.ttf" />
+    <Content Include="assets\fonts\fa-solid-900.woff" />
+    <Content Include="assets\fonts\fa-solid-900.woff2" />
+    <Content Include="assets\fonts\Flaticon.eot" />
+    <Content Include="assets\fonts\Flaticon.ttf" />
+    <Content Include="assets\fonts\Flaticon.woff" />
+    <Content Include="assets\fonts\Flaticon.woff2" />
+    <Content Include="assets\fonts\themify.eot" />
+    <Content Include="assets\fonts\themify.ttf" />
+    <Content Include="assets\fonts\themify.woff" />
+    <Content Include="assets\fonts\_flaticon.scss" />
+    <Content Include="assets\img\hero\h1_hero.webp" />
+    <Content Include="assets\img\logo\form-iocn.webp" />
+    <Content Include="assets\scss\style.scss" />
+    <Content Include="assets\scss\_blog.scss" />
+    <Content Include="assets\scss\_blog_page.scss" />
+    <Content Include="assets\scss\_bradcam.scss" />
+    <Content Include="assets\scss\_color.scss" />
+    <Content Include="assets\scss\_common.scss" />
+    <Content Include="assets\scss\_contact.scss" />
+    <Content Include="assets\scss\_elements.scss" />
+    <Content Include="assets\scss\_extend.scss" />
+    <Content Include="assets\scss\_favourite-place.scss" />
+    <Content Include="assets\scss\_footer.scss" />
+    <Content Include="assets\scss\_h1-hero.scss" />
+    <Content Include="assets\scss\_headerMenu.scss" />
+    <Content Include="assets\scss\_mixins.scss" />
+    <Content Include="assets\scss\_overlay.scss" />
+    <Content Include="assets\scss\_pagination.scss" />
+    <Content Include="assets\scss\_recent.scss" />
+    <Content Include="assets\scss\_services.scss" />
+    <Content Include="assets\scss\_services_section.scss" />
+    <Content Include="assets\scss\_support-company.scss" />
+    <Content Include="assets\scss\_team.scss" />
+    <Content Include="assets\scss\_testimonial.scss" />
+    <Content Include="assets\scss\_variables.scss" />
+    <Content Include="assets\scss\_video-area.scss" />
+    <Content Include="istatistikler.aspx" />
+    <Content Include="paylas.aspx" />
+    <Content Include="resim\Asayfa.PNG" />
+    <Content Include="resim\h1_hero.jpg" />
+    <Content Include="resim\logo.jpg" />
+    <Content Include="resim\soru1.jpeg" />
+    <Content Include="resim\soru3.jpeg" />
+    <Content Include="Web\css\style.css" />
+    <Content Include="Web\images\b1.jpg" />
+    <Content Include="Web\index.html" />
+    <Content Include="contact-form-04\.DS_Store" />
+    <Content Include="contact-form-04\css\.DS_Store" />
+    <Content Include="contact-form-04\css\bootstrap\.DS_Store" />
+    <Content Include="contact-form-04\css\bootstrap\mixins\.DS_Store" />
+    <Content Include="contact-form-04\fonts\.DS_Store" />
+    <Content Include="contact-form-04\images\.DS_Store" />
+    <Content Include="contact-form-04\js\.DS_Store" />
+    <Content Include="contact-form-04\php\.DS_Store" />
+    <Content Include="contact-form-04\php\sendEmail.php" />
+    <Content Include="contact-form-04\scss\.DS_Store" />
+    <Content Include="contact-form-04\scss\bootstrap\.DS_Store" />
+    <Content Include="contact-form-04\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\bootstrap.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_deprecate.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_overflow.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_stretched-link.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\vendor\_rfs.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_alert.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_badge.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_button-group.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_buttons.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_card.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_carousel.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_close.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_code.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_dropdown.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_forms.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_functions.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_grid.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_images.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_input-group.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_list-group.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_media.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_mixins.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_modal.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_nav.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_navbar.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_pagination.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_popover.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_print.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_progress.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_reboot.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_root.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_spinners.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_tables.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_toasts.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_tooltip.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_transitions.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_type.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_utilities.scss" />
+    <Content Include="contact-form-04\scss\bootstrap\_variables.scss" />
+    <Content Include="contact-form-04\scss\style.scss" />
+    <Content Include="Yonetim\Cikmissoruekle.aspx" />
+    <Content Include="Yonetim\Denemesınavdenetle.aspx" />
+    <Content Include="Yonetim\Denemesınavekle.aspx" />
+    <Content Include="Yonetim\paylasdenetleme.aspx" />
+    <Content Include="Yonetim\paylasekle.aspx" />
+    <Content Include="Yonetim\paylaskategori.aspx" />
+    <Content Include="Yonetim\vendors\css\vendor.bundle.base.css" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\css\materialdesignicons.css" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\css\materialdesignicons.min.css" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\preview.html" />
+    <Content Include="Yonetim\vendors\js\vendor.bundle.addons.js" />
+    <Content Include="Yonetim\vendors\js\vendor.bundle.base.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="LogRegSayfa.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Yonetim\css\style.css" />
+    <Content Include="Yonetim\images\dashboard\circle.svg" />
+    <Content Include="Yonetim\images\dashboard\img_1.jpg" />
+    <Content Include="Yonetim\images\dashboard\img_2.jpg" />
+    <Content Include="Yonetim\images\dashboard\img_3.jpg" />
+    <Content Include="Yonetim\images\dashboard\img_4.jpg" />
+    <Content Include="Yonetim\images\faces-clipart\pic-1.png" />
+    <Content Include="Yonetim\images\faces-clipart\pic-2.png" />
+    <Content Include="Yonetim\images\faces-clipart\pic-3.png" />
+    <Content Include="Yonetim\images\faces-clipart\pic-4.png" />
+    <Content Include="Yonetim\images\faces\face1.jpg" />
+    <Content Include="Yonetim\images\faces\face10.jpg" />
+    <Content Include="Yonetim\images\faces\face11.jpg" />
+    <Content Include="Yonetim\images\faces\face12.jpg" />
+    <Content Include="Yonetim\images\faces\face13.jpg" />
+    <Content Include="Yonetim\images\faces\face14.jpg" />
+    <Content Include="Yonetim\images\faces\face15.jpg" />
+    <Content Include="Yonetim\images\faces\face16.jpg" />
+    <Content Include="Yonetim\images\faces\face17.jpg" />
+    <Content Include="Yonetim\images\faces\face18.jpg" />
+    <Content Include="Yonetim\images\faces\face19.jpg" />
+    <Content Include="Yonetim\images\faces\face2.jpg" />
+    <Content Include="Yonetim\images\faces\face20.jpg" />
+    <Content Include="Yonetim\images\faces\face21.jpg" />
+    <Content Include="Yonetim\images\faces\face22.jpg" />
+    <Content Include="Yonetim\images\faces\face23.jpg" />
+    <Content Include="Yonetim\images\faces\face24.jpg" />
+    <Content Include="Yonetim\images\faces\face25.jpg" />
+    <Content Include="Yonetim\images\faces\face26.jpg" />
+    <Content Include="Yonetim\images\faces\face27.jpg" />
+    <Content Include="Yonetim\images\faces\face3.jpg" />
+    <Content Include="Yonetim\images\faces\face4.jpg" />
+    <Content Include="Yonetim\images\faces\face5.jpg" />
+    <Content Include="Yonetim\images\faces\face6.jpg" />
+    <Content Include="Yonetim\images\faces\face7.jpg" />
+    <Content Include="Yonetim\images\faces\face8.jpg" />
+    <Content Include="Yonetim\images\faces\face9.jpg" />
+    <Content Include="Yonetim\images\favicon.png" />
+    <Content Include="Yonetim\images\logo-mini.svg" />
+    <Content Include="Yonetim\images\logo.svg" />
+    <Content Include="Yonetim\js\chart.js" />
+    <Content Include="Yonetim\js\dashboard.js" />
+    <Content Include="Yonetim\js\file-upload.js" />
+    <Content Include="Yonetim\js\misc.js" />
+    <Content Include="Yonetim\js\off-canvas.js" />
+    <Content Include="Yonetim\pages\charts\chartjs.html" />
+    <Content Include="Yonetim\pages\forms\basic_elements.html" />
+    <Content Include="Yonetim\pages\icons\mdi.html" />
+    <Content Include="Yonetim\pages\samples\blank-page.html" />
+    <Content Include="Yonetim\pages\samples\error-404.html" />
+    <Content Include="Yonetim\pages\samples\error-500.html" />
+    <Content Include="Yonetim\pages\samples\login.html" />
+    <Content Include="Yonetim\pages\samples\register.html" />
+    <Content Include="Yonetim\pages\tables\basic-table.html" />
+    <Content Include="Yonetim\pages\ui-features\buttons.html" />
+    <Content Include="Yonetim\pages\ui-features\typography.html" />
+    <Content Include="Yonetim\partials\_footer.html" />
+    <Content Include="Yonetim\partials\_navbar.html" />
+    <Content Include="Yonetim\partials\_sidebar.html" />
+    <Content Include="Yonetim\Site1.Master" />
+    <Content Include="Yonetim\css\maps\style.css.map" />
+    <Content Include="Yonetim\fonts\.DS_Store" />
+    <Content Include="Yonetim\fonts\Ubuntu\.DS_Store" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Bold.eot" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Bold.woff" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Light.eot" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Light.woff" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Medium.eot" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Medium.woff" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Regular.eot" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Regular.woff" />
+    <Content Include="Yonetim\fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <Content Include="Yonetim\images\.DS_Store" />
+    <Content Include="Yonetim\images\dashboard\.DS_Store" />
+    <Content Include="Yonetim\images\faces\.DS_Store" />
+    <Content Include="Yonetim\js\.DS_Store" />
+    <Content Include="Yonetim\PSD\Purple_dashboard_free.psd" />
+    <Content Include="Yonetim\scss\.DS_Store" />
+    <Content Include="Yonetim\scss\components\.DS_Store" />
+    <Content Include="Yonetim\scss\components\_badges.scss" />
+    <Content Include="Yonetim\scss\components\_bootstrap-progress.scss" />
+    <Content Include="Yonetim\scss\components\_buttons.scss" />
+    <Content Include="Yonetim\scss\components\_cards.scss" />
+    <Content Include="Yonetim\scss\components\_checkbox-radio.scss" />
+    <Content Include="Yonetim\scss\components\_dropdown.scss" />
+    <Content Include="Yonetim\scss\components\_forms.scss" />
+    <Content Include="Yonetim\scss\components\_icons.scss" />
+    <Content Include="Yonetim\scss\components\_lists.scss" />
+    <Content Include="Yonetim\scss\components\_preview.scss" />
+    <Content Include="Yonetim\scss\components\_tables.scss" />
+    <Content Include="Yonetim\scss\landing-screens\_auth.scss" />
+    <Content Include="Yonetim\scss\mixins\.DS_Store" />
+    <Content Include="Yonetim\scss\mixins\_animation.scss" />
+    <Content Include="Yonetim\scss\mixins\_background.scss" />
+    <Content Include="Yonetim\scss\mixins\_badges.scss" />
+    <Content Include="Yonetim\scss\mixins\_blockqoute.scss" />
+    <Content Include="Yonetim\scss\mixins\_buttons.scss" />
+    <Content Include="Yonetim\scss\mixins\_cards.scss" />
+    <Content Include="Yonetim\scss\mixins\_misc.scss" />
+    <Content Include="Yonetim\scss\style.scss" />
+    <Content Include="Yonetim\scss\_background.scss" />
+    <Content Include="Yonetim\scss\_demo.scss" />
+    <Content Include="Yonetim\scss\_fonts.scss" />
+    <Content Include="Yonetim\scss\_footer.scss" />
+    <Content Include="Yonetim\scss\_functions.scss" />
+    <Content Include="Yonetim\scss\_misc.scss" />
+    <Content Include="Yonetim\scss\_navbar.scss" />
+    <Content Include="Yonetim\scss\_reset.scss" />
+    <Content Include="Yonetim\scss\_sidebar.scss" />
+    <Content Include="Yonetim\scss\_typography.scss" />
+    <Content Include="Yonetim\scss\_utilities.scss" />
+    <Content Include="Yonetim\scss\_variables.scss" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\bower.json" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\css\materialdesignicons.css.map" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\css\materialdesignicons.min.css.map" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\license.md" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\package.json" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\README.md" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\scss\materialdesignicons.scss" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\scss\_animated.scss" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\scss\_core.scss" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\scss\_extras.scss" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\scss\_functions.scss" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\scss\_icons.scss" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\scss\_path.scss" />
+    <Content Include="Yonetim\vendors\iconfonts\mdi\scss\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Anasayfa.aspx.cs">
+      <DependentUpon>Anasayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anasayfa.aspx.designer.cs">
+      <DependentUpon>Anasayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Bizeulasın.aspx.cs">
+      <DependentUpon>Bizeulasın.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bizeulasın.aspx.designer.cs">
+      <DependentUpon>Bizeulasın.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cikmissoru.aspx.cs">
+      <DependentUpon>Cikmissoru.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cikmissoru.aspx.designer.cs">
+      <DependentUpon>Cikmissoru.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Denemesınav.aspx.cs">
+      <DependentUpon>Denemesınav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Denemesınav.aspx.designer.cs">
+      <DependentUpon>Denemesınav.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forgotpass.aspx.cs">
+      <DependentUpon>Forgotpass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forgotpass.aspx.designer.cs">
+      <DependentUpon>Forgotpass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="istatistikler.aspx.cs">
+      <DependentUpon>istatistikler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="istatistikler.aspx.designer.cs">
+      <DependentUpon>istatistikler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogRegSayfa.aspx.cs">
+      <DependentUpon>LogRegSayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogRegSayfa.aspx.designer.cs">
+      <DependentUpon>LogRegSayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paylas.aspx.cs">
+      <DependentUpon>paylas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paylas.aspx.designer.cs">
+      <DependentUpon>paylas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\Cikmissoruekle.aspx.cs">
+      <DependentUpon>Cikmissoruekle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\Cikmissoruekle.aspx.designer.cs">
+      <DependentUpon>Cikmissoruekle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\Denemesınavdenetle.aspx.cs">
+      <DependentUpon>Denemesınavdenetle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\Denemesınavdenetle.aspx.designer.cs">
+      <DependentUpon>Denemesınavdenetle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\Denemesınavekle.aspx.cs">
+      <DependentUpon>Denemesınavekle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\Denemesınavekle.aspx.designer.cs">
+      <DependentUpon>Denemesınavekle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\paylasdenetleme.aspx.cs">
+      <DependentUpon>paylasdenetleme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\paylasdenetleme.aspx.designer.cs">
+      <DependentUpon>paylasdenetleme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\paylasekle.aspx.cs">
+      <DependentUpon>paylasekle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\paylasekle.aspx.designer.cs">
+      <DependentUpon>paylasekle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\paylaskategori.aspx.cs">
+      <DependentUpon>paylaskategori.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\paylaskategori.aspx.designer.cs">
+      <DependentUpon>paylaskategori.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="fonts\" />
+    <Folder Include="images\" />
+    <Folder Include="pdf\" />
+    <Folder Include="resim\paylas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61797</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44393/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
